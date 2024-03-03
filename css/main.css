@@ -1,0 +1,183 @@
+:root {
+  --light-red-color: hsl(0, 100%, 67%);
+  --orangey-yellow-color: hsl(39, 100%, 56%);
+  --green-teal-color: hsl(166, 100%, 37%);
+  --Cobalt-blue-color: hsl(234, 85%, 45%);
+
+  /* Gradients Background*/
+  --light-slate-blue-color: hsl(252, 100%, 67%);
+  --light-royal-blue-color: hsl(241, 81%, 54%);
+
+  /* Gradients Circle */
+  --violet-blue-color: hsla(256, 72%, 46%, 1);
+  --persian-blue-color: hsla(241, 72%, 46%, 0);
+
+  --pale-blue-color: hsl(221, 100%, 96%);
+  --light-lavender-color: hsl(241, 100%, 89%);
+  --dark-gray-blue-color: hsl(224, 30%, 27%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  margin: 0;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.result-summary {
+  background-color: white;
+  width: 630px;
+  border-radius: 25px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px var(--pale-blue-color);
+}
+.result-summary .result {
+  background-image: linear-gradient(to bottom, var(--light-slate-blue-color), var(--light-royal-blue-color));
+  border-radius: 10px;
+  flex-basis: 50%;
+  text-align: center;
+  padding: 40px;
+}
+.result-summary .result h1 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--light-lavender-color);
+}
+.result-summary .result .res {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  color: hsl(241 100% 80% / 1);
+  background-image: linear-gradient(to bottom, var(--violet-blue-color), var(--persian-blue-color));
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.result-summary .result .res span {
+  display: block;
+}
+.result-summary .result .res span:first-child {
+  font-size: 55px;
+  color: white;
+  font-weight: bold;
+}
+.result-summary .result .text {
+  margin-top: 50px;
+}
+.result-summary .result .text h2 {
+  margin: 0;
+  font-weight: 600;
+  color: white;
+}
+.result-summary .result .text p {
+  margin: 10px 0 0;
+  color: var(--light-lavender-color);
+  line-height: 1.4;
+}
+.result-summary .summary {
+  flex-basis: 50%;
+  padding: 30px;
+}
+.result-summary .summary h1 {
+  margin: 0 0 20px;
+  font-size: 20px;
+  color: var(--dark-gray-blue-color);
+}
+.result-summary .summary .sum-row {
+  display: flex;
+  padding: 15px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.result-summary .summary .sum-row:not(:last-child) {
+  margin-bottom: 15px;
+}
+.result-summary .summary .sum-row img {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.result-summary .summary .sum-row span:first-of-type {
+  flex: 1;
+}
+.result-summary .summary .sum-row span:last-of-type {
+  color: hsl(224deg 30% 27% / 40%);
+  font-weight: 800;
+}
+.result-summary .summary .sum-row span:last-of-type span {
+  color: var(--dark-gray-blue-color);
+}
+.result-summary .summary .sum-row.reaction {
+  background-color: hsl(0deg 100% 67% / 10%);
+}
+.result-summary .summary .sum-row.reaction > span:first-of-type {
+  color: var(--light-red-color);
+}
+.result-summary .summary .sum-row.memory {
+  background-color: hsl(39deg 100% 56% / 10%);
+}
+.result-summary .summary .sum-row.memory > span:first-of-type {
+  color: var(--orangey-yellow-color);
+}
+.result-summary .summary .sum-row.verbal {
+  background-color: hsl(166deg 100% 37% / 10%);
+}
+.result-summary .summary .sum-row.verbal > span:first-of-type {
+  color: var(--green-teal-color);
+}
+.result-summary .summary .sum-row.visual {
+  background-color: hsl(241deg 100% 89% / 10%);
+}
+.result-summary .summary .sum-row.visual > span:first-of-type {
+  color: var(--light-slate-blue-color);
+}
+.result-summary a {
+  display: block;
+  text-decoration: none;
+  background-color: var(--dark-gray-blue-color);
+  color: white;
+  margin: 20px auto 0;
+  border-radius: 25px;
+  padding: 15px;
+  text-align: center;
+  transition: opacity 0.3s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.result-summary a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, var(--light-slate-blue-color), var(--light-royal-blue-color));
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s;
+}
+.result-summary a:hover::after {
+  opacity: 1;
+}
+@media (max-width: 767px) {
+  .main {
+    height: fit-content;
+  }
+  .result-summary {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0 0;
+  }
+  .result-summary .result {
+    border-radius: 0 0 40px 40px;
+  }
+}
