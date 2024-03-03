@@ -4,8 +4,8 @@
 
 ### Links
 
-- Solution URL: ()
-- Live Site URL: ()
+- Solution URL: (https://github.com/aAllam0/Result-Summary)
+- Live Site URL: (https://aallam0.github.io/Result-Summary)
 
 ### Useful resources
 
