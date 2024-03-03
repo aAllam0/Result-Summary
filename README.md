@@ -4,7 +4,7 @@
 
 ### Links
 
-- Solution URL: (https://github.com/aAllam0/Result-Summary)
+- Solution URL: (https://www.frontendmentor.io/solutions/gradient-background-using-lineargradient-function-WU_eZZ6aGb)
 - Live Site URL: (https://aallam0.github.io/Result-Summary)
 
 ### Useful resources
